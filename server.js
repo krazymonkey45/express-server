@@ -1,5 +1,7 @@
-const http = require('http')
+const http = require('http');
 
 http.createServer(function(request, response){
-    response.writeHead('content-type')
+        response.writeHead(200, {"content-type": "text/html"});
+        response.write("<!DOCTYPE html >")
+        response.write("<html>");
 });
