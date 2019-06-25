@@ -1,6 +1,6 @@
 const http = require('http');
 
-http.createServer(function(request, response){
+const server = http.createServer(function(request, response){
         response.writeHead(200, {"content-type": "text/html"});
         response.write("<!DOCTYPE html >");
         response.write("<html>");
@@ -11,4 +11,8 @@ http.createServer(function(request, response){
         response.write("Hello VERO!!!");
         response.write("</body>");
         response.write("</html>");
+        response.end();
 });
+
+server.listen(3000);
+console.log('hey dude, your server is up and ruinning on port 3000')
